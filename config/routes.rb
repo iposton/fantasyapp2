@@ -28,7 +28,7 @@ end
 
   
 
-#   get "users/:id" => "users#show", as: :user
+#get "users/:id" => "users#show", as: :user
 
 #   post "users/" => "users#create"
 

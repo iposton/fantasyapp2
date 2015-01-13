@@ -76,7 +76,16 @@
 								
 				<p class="lead-fill">Interested? Sign Up Below.</p>
 
-					
+					<ul>
+  
+						<% @user.errors.full_messages.each do |msg| %>
+
+						<p class="bg-warning alert alert-sm text-danger"><%= msg %></p>
+
+
+                    </ul>
+
+                             <% end %>
 				
 		   
 		  
@@ -119,16 +128,7 @@
 			
    		</div> <!-- end row div -->
 
-   			<ul>
-  
-						<% @user.errors.full_messages.each do |msg| %>
-
-						<p class="bg-warning alert alert-sm text-danger"><%= msg %></p>
-
-
-                    </ul>
-
-                             <% end %>
+   			
 		   
 	
 		   

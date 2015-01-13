@@ -1,3 +1,11 @@
+
+
+<div class="container">
+      <!-- Example row of columns -->
+
+
+
+
  <div class="navbar navbar-default navbar-fixed-top">
 		  
 		  <div class="container">
@@ -16,32 +24,61 @@
 				  
 				  </button>
 
-				 
+				  
+				    <a class="navbar-brand">Welcome <strong> <%= current_user.name %></strong>!</a>
+				   
 				  
 			  </div> <!-- end of navbar-header -->
 			  
-			  <div class="collapse navbar-collapse">
-				  
-				 <a href="http://localhost:3000/users/signup" class="navbar-brand">FantasySportsHub</a>
+			  
 				  
 				 
-					  <div class="navbar-right">
+				  
+				 
+					  
 						  
 			   		
+
+			   
 						 
 					
 					  
-					 
+					<a href="" class="navbar-brand centered">FantasySportsHub</a> 
+
+      <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+			
+			<li><%= link_to "Home", users_path %></li>
+          </ul>
+        
 					  
 				 	  
 						  
-			   	
-					  <!-- <div><%= session[:user_id] %></div>
- -->
+	<div class="navbar-right">		   	
+					
+           
+
+        <% if logged_in? %>
+
+  
+
+ 	
+
+ 	   <%= button_to "Log Out", logout_path, method: 'delete', class: 'btn btn-danger button' %> 
+ 	   <% else %>
 
 
-						 
-					 </div> <!-- end nav-bar right -->  
+ 	   <%= link_to "Log In", users_signup_path,  class: 'btn btn-danger button' %> 
+
+ 
+   </div>
+ 	 
+
+ 	<% end %>
+				</div>		 
+					   
 				  
 			  </div> <!-- end of collapse navbar div -->
 			  
@@ -49,26 +86,13 @@
 		  
 	  </div> <!-- end of navbar div -->
 <div class="container">
+ 
+
 
 
 	   
 
-<div class="row">
 
-	<h2>List Of FantasySportsHub Participants</h2>
-<% @users.each do |user| %>
-
-	      
-				  
-				    <p> <strong> <%= user.name %></strong> has imported their team here </p>
-				   <% end %>
-
-				  
-	
-
- </div>
-
-				   <h1>Click on the FantasySportsHub link in the NavBar and go Signup!</h1>
 </div>
 
 	

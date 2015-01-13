@@ -12,7 +12,11 @@
 
      <p>You Are Authorizing Us Access To Your Fantasy Sports Profile When You Click Import.</p>
 
+     
+
      <%= link_to "Edit This User!", edit_user_path(@user), class: 'btn btn-default' %>
+
+     <%= link_to "Delete this User!", user_path, method: :delete, class: 'btn btn-lg btn-danger', data: { confirm: "Are you sure you want to delete this User?"} %>
 
      	            <ul>
   

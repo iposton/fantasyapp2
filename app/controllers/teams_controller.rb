@@ -52,8 +52,8 @@ class TeamsController < ApplicationController
 
 	 def destroy
 		@user = User.find(params[:user_id])
-		#@team = @user.teams.find(params[:id])
-		#@team.destroy
+		@team = @user.teams.find(params[:id])
+		@team.destroy
 		redirect_to user_teams_path
 	end
 

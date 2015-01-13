@@ -50,6 +50,7 @@
             
             
 			<li><%= link_to "Add New Team", new_user_team_path %></li>
+			<li><%= link_to "Home", user_path(current_user) %></li>
           </ul>
         
 					  
@@ -85,34 +86,10 @@
 		  
 	  </div> <!-- end of navbar div -->
 
-	  <h1>These are all the teams</h1>
+	  <h1>Your Team Has Been Successfully Deleted!</h1>
 
 
-<div class="row-team-list">
 
-<% @teams.each do |team| %>
-
- <div class="outline">
-
- 	
-        	
-    <h4><%= team.name %> </h4>
-    <div><%= team.player %></div>
-	<div><%= team.player2 %></div>
-	<div><%= team.player3 %></div>
-	<div><%= team.player4 %></div>
-	<div><%= team.player5 %></div>
-	<div><%= team.player6 %></div>
-
-	<p><%= link_to "Team info", user_teams_path, class: 'btn btn-default' %></p>
-
-	
-	
-</div>
-
-<% end %>
-
-</div>
 
    
 

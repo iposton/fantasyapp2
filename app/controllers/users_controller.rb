@@ -51,7 +51,7 @@ before_action :require_login, only: [:show, :edit]
 	def update
 
 		@user = User.find(params[:id])
-		if @user.update_attributes(params.require(:user).permit(:name, :email, :password, :team))
+		if @user.update_attributes(params.require(:user).permit(:name, :email, :password))
 			redirect_to user_path(@user)
 		else
 
@@ -65,12 +65,12 @@ before_action :require_login, only: [:show, :edit]
 
 		
 		@user.destroy
-		redirect_to users_path
+		redirect_to users_signup_path
 	end 
 
 
 	private
 	def user_params
-		params.require(:user).permit(:name, :email, :password, :team)
+		params.require(:user).permit(:name, :email, :password)
 	end
 end
