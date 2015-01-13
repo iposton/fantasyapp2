@@ -1,0 +1,134 @@
+
+
+<div class="container">
+      <!-- Example row of columns -->
+
+
+
+
+ <div class="navbar navbar-default navbar-fixed-top">
+		  
+		  <div class="container">
+			  
+			  <div class="navbar-header">
+				  
+				  
+				  
+             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				  
+				 
+				  
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  
+				  </button>
+
+				  
+				    <a class="navbar-brand">Welcome <strong> <%= current_user.name %></strong>!</a>
+				   
+				  
+			  </div> <!-- end of navbar-header -->
+			  
+			  
+				  
+				 
+				  
+				 
+					  
+						  
+			   		
+
+			   
+						 
+					
+					  
+					<a href="" class="navbar-brand centered">FantasySportsHub</a> 
+
+      <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+			<li><%= link_to "Add New Team", new_user_team_path %></li>
+          </ul>
+        
+					  
+				 	  
+						  
+	<div class="navbar-right">		   	
+					
+           
+
+        <% if logged_in? %>
+
+  
+
+ 	
+
+ 	   <%= button_to "Log Out", logout_path, method: 'delete', class: 'btn btn-danger button' %> 
+ 	   <% else %>
+
+
+ 	   <%= link_to "Log In", users_signup_path,  class: 'btn btn-danger button' %> 
+
+ 
+   </div>
+ 	 
+
+ 	<% end %>
+				</div>		 
+					   
+				  
+			  </div> <!-- end of collapse navbar div -->
+			  
+		  </div> <!-- end of navbar container div -->
+		  
+	  </div> <!-- end of navbar div -->
+
+	  <h1>These are all the teams</h1>
+
+
+<div class="row-team-list">
+
+<% @teams.each do |team| %>
+
+ <div class="outline">
+
+ 	
+        	
+    <h4><%= team.name %> </h4>
+    <div><%= team.player %></div>
+	<div><%= team.player2 %></div>
+	<div><%= team.player3 %></div>
+	<div><%= team.player4 %></div>
+	<div><%= team.player5 %></div>
+	<div><%= team.player6 %></div>
+
+	<p><%= link_to "Team info", user_teams_path, class: 'btn btn-default' %></p>
+
+	
+	
+</div>
+
+<% end %>
+
+</div>
+
+   
+
+     
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+ 
+
+
+
+

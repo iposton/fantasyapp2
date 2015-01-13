@@ -1,0 +1,75 @@
+ <div class="navbar navbar-default navbar-fixed-top">
+		  
+		  <div class="container">
+			  
+			  <div class="navbar-header">
+				  
+				  
+				  
+             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				  
+				 
+				  
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  
+				  </button>
+
+				 
+				  
+			  </div> <!-- end of navbar-header -->
+			  
+			  <div class="collapse navbar-collapse">
+				  
+				 <a href="http://localhost:3000/users/signup" class="navbar-brand">FantasySportsHub</a>
+				  
+				 
+					  <div class="navbar-right">
+						  
+			   		
+						 
+					
+					  
+					 
+					  
+				 	  
+						  
+			   	
+					  <!-- <div><%= session[:user_id] %></div>
+ -->
+
+
+						 
+					 </div> <!-- end nav-bar right -->  
+				  
+			  </div> <!-- end of collapse navbar div -->
+			  
+		  </div> <!-- end of navbar container div -->
+		  
+	  </div> <!-- end of navbar div -->
+<div class="container">
+
+
+	   
+
+<div class="row">
+
+	<h2>List Of FantasySportsHub Participants</h2>
+<% @users.each do |user| %>
+
+	      
+				  
+				    <p> <strong> <%= user.name %></strong> has imported their team here </p>
+				   <% end %>
+
+				  
+	
+
+ </div>
+
+				   <h1>Click on the FantasySportsHub link in the NavBar and go Signup!</h1>
+</div>
+
+	
+ 

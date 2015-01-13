@@ -1,0 +1,104 @@
+<%= render "shared/navbar" %>
+
+<div class="row">
+
+	<h1>Hi! <%= @user.name %></h1>
+
+	<p>Please Import Your Fantasy Sports Team.</p>
+
+     
+
+     <p><%= link_to "Import Your Team", new_user_path, class: 'btn btn-success' %></p>
+
+     <p>You Are Authorizing Us Access To Your Fantasy Sports Profile When You Click Import.</p>
+
+     <%= link_to "Edit This User!", edit_user_path(@user), class: 'btn btn-default' %>
+
+     	            <ul>
+  
+						<% @user.errors.full_messages.each do |msg| %>
+
+						<p class="bg-warning alert alert-sm text-danger"><%= msg %></p>
+
+
+                    </ul>
+
+             <% end %>
+
+ </div>  <!-- end div form-group -->
+
+     
+     <div class="form-signin">         
+
+ <h3>Add your team!</h3>
+	<%= form_for [@user, @team] do |f| %>
+
+	   	    
+
+					<p>Team Name<%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: 'Your Team Name' %></p>
+
+
+					<p>PG<%= f.text_field :player, class: 'form-control', autofocus: true, placeholder: 'Point Guard' %></p>
+
+					  
+
+					<p>SG<%= f.text_field :player2, class: 'form-control', autofocus: true, placeholder: 'Shooting Guard' %></p>
+
+					  
+
+					<p>SF<%= f.text_field :player3, class: 'form-control', autofocus: true, placeholder: 'Small Forward' %></p>
+
+					 
+
+					<p>PF<%= f.text_field :player4, class: 'form-control', autofocus: true, placeholder: 'Power Forward' %></p>
+
+
+						<p>C<%= f.text_field :player5, class: 'form-control', autofocus: true, placeholder: 'Center' %></p>
+
+					  
+
+				    <p>Sixth Man<%= f.text_field :player6, class: 'form-control', autofocus: true, placeholder: '6th Man' %></p>
+
+
+					<p><%= f.submit "Add Your Team!", class: "btn btn-lg btn-success" %></p>
+				  
+			
+
+			 <% end %>
+
+		</div>	 
+
+<div class="container-fluid container-two">
+
+<% @user.teams.each do |team| %>
+
+ <div class="outline">
+
+ 	
+        	
+    <h4><%= team.name %> </h4>
+    <div><%= team.player %></div>
+	<div><%= team.player2 %></div>
+	<div><%= team.player3 %></div>
+	<div><%= team.player4 %></div>
+	<div><%= team.player5 %></div>
+	<div><%= team.player6 %></div>
+
+	<p><%= link_to "Team info", user_team_path(@user, team), class: 'btn btn-default' %></p>
+
+	
+	
+</div>
+
+<% end %>
+
+
+
+</div>   
+
+
+
+
+
+
+

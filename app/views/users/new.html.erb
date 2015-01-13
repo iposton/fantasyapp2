@@ -1,0 +1,149 @@
+
+ <div class="navbar navbar-default navbar-fixed-top">
+		  
+		  <div class="container">
+			  
+			  <div class="navbar-header">
+				  
+				  
+				  
+             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				  
+				 
+				  
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  
+				  </button>
+				  
+				    <a href="" class="navbar-brand">FantasySportsHub</a>
+				  
+				  
+			  </div> <!-- end of navbar-header -->
+			  
+			  <div class="collapse navbar-collapse">
+				  
+				 
+				  
+				  <div class="navbar-form navbar-right">
+					  <div class="form-group">
+
+	
+
+					  <%= form_for :login do |f| %>
+						  
+			   		
+
+			   		<%= f.text_field :email, class: 'form-control', placeholder: 'Your Email' %>
+						 
+					  </div> <!-- end form group email div -->
+					  
+					   <div class="form-group">
+					  
+		  
+				   
+
+				    <%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
+		  
+					  </div>  <!-- end password div form-group2 -->
+					  
+					 <%= f.submit "Log In", class: "btn btn-success" %>
+					  
+				  </div>
+
+				  <% end %>
+				  
+			  </div> <!-- end of collapse navbar div -->
+			  
+		  </div> <!-- end of navbar container div -->
+		  
+	  </div> <!-- end of navbar div -->
+	 
+	  
+	   <div class="container contentContainer" id="topContainer">
+		   
+		
+   		<div class="row">
+			
+   			<div class="form-signin" id="topRow">
+   				
+				<h1 class="marginTop lead-fill">FantasySportsHub</h1>
+				
+				<p class="lead">All Your Fantasy Sports Teams In One Place.</p>
+				
+				
+								
+				<p class="lead-fill">Interested? Sign Up Below.</p>
+
+					
+				
+		   
+		  
+		     <div class="form-group">
+			  
+			   	<%= form_for @user do |f| %>
+
+			   	    <%= f.label :name %>
+
+					<p><%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: 'User Name' %></p>
+
+					  <%= f.label :email %>
+
+					<p><%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: 'Your Email' %></p>
+
+					  <%= f.label :password %>
+
+					<p><%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: 'Password' %></p>
+
+					<p><%= f.submit "Join The Fun!", class: "btn btn-lg btn-success" %></p>
+				  
+			 </div>  <!-- end div form-group -->
+
+
+			 
+			 <% end %>
+		    
+	  
+			 
+	  
+ 	  
+		  	
+				
+   			</div> <!-- end form-signin -->
+
+
+			
+   		
+			
+			
+   		</div> <!-- end row div -->
+
+   			<ul>
+  
+						<% @user.errors.full_messages.each do |msg| %>
+
+						<p class="bg-warning alert alert-sm text-danger"><%= msg %></p>
+
+
+                    </ul>
+
+                             <% end %>
+		   
+	
+		   
+	  
+
+	
+ </div> <!-- end of container div -->	
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="js/bootstrap.min.js"></script>
+
+
+

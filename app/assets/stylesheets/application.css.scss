@@ -1,0 +1,218 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+body {
+
+	margin-top: 100px;
+/*/*background-color: #31b8f6; /*top colour*/
+/*background-image: -webkit-linear-gradient(top, #31b8f6, #ca8327);
+background-image:    -moz-linear-gradient(top, #31b8f6, #ca8327);
+background-image:      -o-linear-gradient(top, #31b8f6, #ca8327);
+background-image:         linear-gradient(to bottom, #31b8f6, #ca8327);*/
+background-color: #e39d05; /*top colour*/
+background-image: -webkit-linear-gradient(top, #e39d05, #e6d7a6);
+background-image:    -moz-linear-gradient(top, #e39d05, #e6d7a6);
+background-image:      -o-linear-gradient(top, #e39d05, #e6d7a6);
+background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
+	text-align: center;
+ height:800px;
+}
+
+.container-two {
+
+  height: 600px;
+}
+
+.row {
+
+	background: white;
+	border: 5px solid #5cb85c;
+	border-radius: 10px;
+	width: 45%;
+	margin: 0 auto;
+ 
+}
+
+.row-team-list {
+
+  background: white;
+  border: 5px solid #5cb85c;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+  height: 1000px;
+}
+
+.outline {
+
+  border: 2px solid black;
+  display: inline-block;  
+  width: 300px;
+  
+  height: 250px;
+}
+
+
+
+.lead {
+
+	font-size: 20px;
+	color: rgb(68,71,69);
+}
+
+.button {
+  margin-top: 8px;
+}
+
+.lead-fill {
+
+	color: rgb(68,71,69);
+}
+
+
+.form-signin {
+  max-width: 430px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin-team {
+  margin-top: 0;
+  max-width: 430px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+#posts-box  {
+  
+  padding: 0;
+  border: 3px solid #efefef;
+  border-top: 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  
+  margin-top: 30px;
+  
+}
+
+
+#posts-box ol {
+  
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  
+}
+
+
+#posts-box li {
+  
+  font-size: 16px;
+  padding: 12px;
+  border-bottom: 3px solid #efefef;
+  min-height: 60px;
+  line-height: 20px;
+  
+}
+
+
+#posts-box a {
+  
+  color: #555;
+  opacity: 2px;
+  
+}
+
+
+#posts-box li:last-child {
+  
+  
+  border-bottom: 0px;
+  
+}
+
+
+#posts-box h4 {
+  
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #efefef;
+  color: #555;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  padding: 12px;
+  letter-spacing: 2px;
+  margin: 0;
+  
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+  
+  border: 5px dashed #F0AD4E;
+  
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}

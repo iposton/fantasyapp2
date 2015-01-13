@@ -1,0 +1,129 @@
+
+
+
+ <div class="navbar navbar-default navbar-fixed-top">
+		  
+		  <div class="container">
+			  
+			  <div class="navbar-header">
+				  
+				  
+				  
+             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				  
+				 
+				  
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  
+				  </button>
+
+				  
+				    <a class="navbar-brand">Welcome <strong> <%= current_user.name %></strong>!</a>
+				   
+				  
+			  </div> <!-- end of navbar-header -->
+			  
+			  
+				  
+				 
+				  
+				 
+					  
+						  
+			   		
+
+			   
+						 
+					
+					  
+					<a href="" class="navbar-brand centered">FantasySportsHub</a> 
+
+      <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+			<li><%= link_to "Teams List", user_teams_path(@user) %></li>
+          </ul>
+        
+					  
+				 	  
+						  
+	<div class="navbar-right">		   	
+					
+           
+
+        <% if logged_in? %>
+
+  
+
+ 	
+
+ 	   <%= button_to "Log Out", logout_path, method: 'delete', class: 'btn btn-danger button' %> 
+ 	   <% else %>
+
+
+ 	   <%= link_to "Log In", users_signup_path,  class: 'btn btn-danger button' %> 
+
+ 
+   </div>
+ 	 
+
+ 	<% end %>
+				</div>		 
+					   
+				  
+			  </div> <!-- end of collapse navbar div -->
+			  
+		  </div> <!-- end of navbar container div -->
+		  
+	  </div> <!-- end of navbar div -->
+
+<div class="container">
+	<div class="form-signin-team" id="topRow">
+<h1>Edit Team <%= @team.name %>!</h1>
+
+<div class="form-group">
+
+
+
+		<%= form_for [@user, @team] do |f| %>
+
+			   	    
+
+					<p>Team Name<%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: 'Your Team Name' %></p>
+
+					  
+
+					<p>PG<%= f.text_field :player, class: 'form-control', autofocus: true, placeholder: 'Point Guard' %></p>
+
+					 
+
+					<p>SG<%= f.text_field :player2, class: 'form-control', autofocus: true, placeholder: 'Shooting Guard' %></p>
+
+					  
+
+					<p>SF<%= f.text_field :player3, class: 'form-control', autofocus: true, placeholder: 'Small Forward' %></p>
+
+					 
+
+					<p>PF<%= f.text_field :player4, class: 'form-control', autofocus: true, placeholder: 'Power Forward' %></p>
+
+					
+
+						<p>C<%= f.text_field :player5, class: 'form-control', autofocus: true, placeholder: 'Center' %></p>
+
+					
+
+				    <p>Sixth Man<%= f.text_field :player6, class: 'form-control', autofocus: true, placeholder: '6th Man' %></p>
+
+
+
+
+		<p><%= f.submit "Submit Changes!", class: "btn btn-lg btn-success" %></p>
+</div>
+	<% end %>
+
+</div>
+</div>

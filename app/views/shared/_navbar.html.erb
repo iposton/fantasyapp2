@@ -1,0 +1,71 @@
+
+ <div class="navbar navbar-default navbar-fixed-top">
+		  
+		  <div class="container">
+			  
+			  <div class="navbar-header">
+				  
+				  
+				  
+             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				  
+				 
+				  
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  
+				  </button>
+
+				  
+				    <a class="navbar-brand">Welcome <strong> <%= @user.name %></strong>!</a>
+				   
+				  
+			  </div> <!-- end of navbar-header -->
+			  
+			  <div class="collapse navbar-collapse">
+				  
+				 
+				  
+				 
+					  
+						  
+			   		
+
+			   
+						 
+					
+					  
+					<a href="" class="navbar-brand centered">FantasySportsHub</a> 
+					  
+				 	  
+						  
+	<div class="navbar-right">		   	
+					
+           
+
+        <% if logged_in? %>
+
+  
+
+ 	
+
+ 	   <%= button_to "Log Out", logout_path, method: 'delete', class: 'btn btn-danger button' %> 
+ 	   <% else %>
+
+
+ 	   <%= link_to "Log In", users_signup_path,  class: 'btn btn-danger button' %> 
+
+ 
+   </div>
+ 	 
+
+ 	<% end %>
+						 
+					 </div> <!-- end form group email div -->  
+				  
+			  </div> <!-- end of collapse navbar div -->
+			  
+		  </div> <!-- end of navbar container div -->
+		  
+	  </div> <!-- end of navbar div -->
