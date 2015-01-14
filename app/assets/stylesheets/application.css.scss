@@ -32,15 +32,15 @@ background-image:    -moz-linear-gradient(top, #e39d05, #e6d7a6);
 background-image:      -o-linear-gradient(top, #e39d05, #e6d7a6);
 background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
 	text-align: center;
- height:1400px;
+ 
 }
 
-.container-two {
+.container-full {
 
-  height: 800px;
+  height: 575px;
 }
 
-.row {
+.row-user {
 
 	background: white;
 	border: 5px solid #5cb85c;
@@ -199,7 +199,7 @@ background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
 /* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 15px;
-  margin: 0 -15px 15px;
+  margin: 0 15px 15px;
 }
 .sidebar-module-inset {
   padding: 15px;

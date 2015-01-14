@@ -8,7 +8,7 @@ before_action :require_login, only: [:show, :edit]
 	def index
 
 		@users = User.all
-		@team = Team.new
+		
 
 	end
 

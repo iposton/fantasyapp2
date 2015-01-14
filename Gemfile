@@ -53,3 +53,8 @@ gem 'bcrypt', '~> 3.1.9'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Gemfile
+ruby '2.1.3'
+# gems gems gems gems
+# gems gems gems gems
+

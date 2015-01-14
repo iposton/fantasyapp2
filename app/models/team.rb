@@ -8,6 +8,12 @@ class Team
   field :player5, type: String
   field :player6, type: String
   field :available, type: String
+  field :available2, type: String
+  field :available3, type: String
+  field :available4, type: String
+  field :available5, type: String
+  field :available6 , type: String
+
   embedded_in :user
 
   validates :name, presence: true, on: :create
