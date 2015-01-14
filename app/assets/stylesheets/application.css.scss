@@ -35,12 +35,16 @@ background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
  
 }
 
+.navbar-mar {
+margin-right: 350px;
+}
+
 .container-full {
 
   height: 575px;
 }
 
-.row-user {
+.row-user-signup {
 
 	background: white;
 	border: 5px solid #5cb85c;
@@ -48,6 +52,28 @@ background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
 	width: 45%;
 	margin: 0 auto;
  
+}
+
+.row-user {
+
+  background: white;
+  border: 5px solid #5cb85c;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+
+ 
+}
+
+.glyph {
+
+  font-size: 100px;
+   border: 10px solid black;
+   border-radius: 50%;
+  display: inline-block;
+  padding-top:5px;  
+  width: 140px;
+  height: 140px;
 }
 
 .row-team-list {
@@ -64,9 +90,9 @@ background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
 
   border: 2px solid black;
   display: inline-block;  
-  width: 300px;
-  
-  height: 250px;
+  width: 150px;
+  border-radius: 50%;
+  height: 150px;
 }
 
 
@@ -89,7 +115,7 @@ background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
 
 .form-signin {
   max-width: 430px;
-  padding: 15px;
+  padding: 0px;
   margin: 0 auto;
 }
 
@@ -189,7 +215,7 @@ background-image:         linear-gradient(to bottom, #e39d05, #e6d7a6);
   color: #555;
   text-align: center;
   font-weight: 600;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
   padding: 12px;
   letter-spacing: 2px;
   margin: 0;

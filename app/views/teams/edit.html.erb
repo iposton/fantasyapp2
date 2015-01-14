@@ -24,17 +24,8 @@
 				   
 				  
 			  </div> <!-- end of navbar-header -->
-			  
-			  
-				  
-				 
-				  
-				 
-					  
-						  
-			   		
 
-			   
+
 						 
 					
 					  
@@ -44,7 +35,7 @@
           <ul class="nav navbar-nav">
             
             
-			<li><%= link_to "Teams List", user_teams_path(@user) %></li>
+			<li><%= link_to "Home", user_path(current_user) %></li>
           </ul>
         
 					  
@@ -126,4 +117,7 @@
 	<% end %>
 
 </div>
+
+		  
+     <%= render "shared/footer" %>
 </div>
