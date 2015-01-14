@@ -1,87 +1,21 @@
-<div class="container">
-      <!-- Example row of columns -->
+<%= render "shared/teamnav" %>
 
-
-
-
- <div class="navbar navbar-default navbar-fixed-top">
-		  
-		  <div class="container">
-			  
-			  <div class="navbar-header">
-				  
-				  
-				  
-             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				  
-				 
-				  
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  
-				  </button>
-
-				  
-				    <a class="navbar-brand">Welcome <strong> <%= current_user.name %></strong>!</a>
-				   
-				  
-			  </div> <!-- end of navbar-header -->
-			  
-			 
-					
-					  
-					<a href="" class="navbar-brand centered">FantasySportsHub</a> 
-
-      <div id="navbar" class="collapse navbar-collapse">
-
-
-          <ul class="nav navbar-nav">
-          
-			<li><%= link_to "Home", user_path(current_user) %></li>
-
-          </ul>          
-        
-		  
-	    <div class="navbar-right">		   	
-	 
-
-	        <% if logged_in? %>
-
-	 	   <%= button_to "Log Out", logout_path, method: 'delete', class: 'btn btn-danger button' %> 
-	 	   <% else %>
-
-	 	   <%= link_to "Log In", users_signup_path,  class: 'btn btn-danger button' %> 
-
- 
-        </div>
- 	 
- 	   <% end %>
-				</div>		 
-					   
-				  
-			  </div> <!-- end of collapse navbar div -->
-			  
-		  </div> <!-- end of navbar container div -->
-		  
-	  </div> <!-- end of navbar div -->
-
-	   <div class="container">
+ <div class="container-show-team">
   
-      <div class="row">
+     <div class="row">
 
-<h1> <%= @team.name %> </h1>
+<h1> Team Info Page</h1>
 
-  <div id="posts-box" class="sidebar-module col-md-4">
+  <div id="posts-box" class="sidebar-module col-sm-4">
 
   	<h4><%= @team.name %> </h4>
   	<ol>
-    <li><%= @team.player %></li>
-	<li><%= @team.player2 %></li>
-	<li><%= @team.player3 %></li>
-	<li><%= @team.player4 %></li>
-	<li><%= @team.player5 %></li>
-	<li><%= @team.player6 %></li>
+    <li>PG - <%= @team.player %></li>
+	<li>SG - <%= @team.player2 %></li>
+	<li>SF - <%= @team.player3 %></li>
+	<li>PF -  <%= @team.player4 %></li>
+	<li>C - <%= @team.player5 %></li>
+	<li>Sixth Man - <%= @team.player6 %></li>
 	<li><%= link_to "Edit Team", edit_user_team_path(@user, @team), class: 'btn btn-lg btn-default' %>
 
 <%= link_to "Delete Team", user_team_path(@user, @team), method: :delete, class: 'btn btn-lg btn-danger', data: { confirm: "Are you sure you want to delete this Team?"} %></li>
@@ -90,7 +24,7 @@
 
 </div>
 
-  <div id="posts-box" class="sidebar-module col-md-4">
+  <div id="posts-box" class="sidebar-module col-sm-4">
 
   	<h4><%= @team.name %>'s Available Players </h4>
   	<ol>
@@ -101,7 +35,29 @@
 		<li><%= @team.available4 %></li>
 		<li><%= @team.available5 %></li>
 		<li><%= @team.available6 %></li>
-		<li><%= link_to "Add Player", edit_user_team_path(@user, @team), class: 'btn btn-lg btn-warning' %>
+		<li><%= link_to "Add Player", "http://sports.yahoo.com/nba/stats", class: 'btn btn-lg btn-warning' %>
+
+	    
+    </ol>
+  
+
+
+
+
+     </div>
+
+       <div id="posts-box" class="sidebar-module col-sm-4">
+
+  	<h4>Top Unavailable Players </h4>
+  	<ol>
+
+	    <li><%= @team.topunavailable %></li>
+		<li><%= @team.topunavailable2 %></li>
+		<li><%= @team.topunavailable3 %></li>
+		<li><%= @team.topunavailable4 %></li>
+		<li><%= @team.topunavailable5 %></li>
+		<li><%= @team.topunavailable6 %></li>
+		<li><%= link_to "More Info", "http://sports.yahoo.com/nba/stats", class: 'btn btn-lg btn-default' %>
 
 	    
     </ol>
@@ -114,7 +70,9 @@
 
   </div>
 
-<%= render "shared/footer" %>
+
 
 </div>
+
+<%= render "shared/footer" %>
 

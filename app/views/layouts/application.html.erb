@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>Fantasyapp</title>
-  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext', :media => "all" %>
+
+   <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Alegreya+SC:400,700italic', :media => "all" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>

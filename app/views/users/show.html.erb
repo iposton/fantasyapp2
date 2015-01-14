@@ -4,7 +4,7 @@
 
 	
 
-	 <h1>Hi! <%= @user.name %></h1>
+	 <h1>Hi <%= @user.name %>!</h1>
 
 
      <p><%= link_to "Import Your Team", user_path(current_user), class: 'btn btn-lg btn-success', data: { confirm: "Sorry This App Is Not Connected To The Fantasy Sports API yet :( Coming Soon..."} %></p>
@@ -77,6 +77,14 @@
 
 		</div>	 
 
+<div class="team-headline">
+
+	<h3>These Are My Fantasy Basketball Teams Below</h3>
+
+	<h3>Click on the team info button to find out which players are available!</h3>
+
+
+ </div> 
 
 
     <div class="container">
@@ -96,13 +104,16 @@
 	<p><%= link_to "Team info", user_team_path(@user, team), class: 'btn btn-default' %></p>
         </div>
         <% end %>
-        
+       
+
       </div>
 
-      
+  
 
     
     </div> <!-- /container -->
+
+
 
 
 <%= render "shared/footer" %>

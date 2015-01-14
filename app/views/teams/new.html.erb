@@ -1,95 +1,11 @@
-
-
- <div class="navbar navbar-default navbar-fixed-top">
-		  
-		  <div class="container">
-			  
-			  <div class="navbar-header">
-				  
-				  
-				  
-             <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				  
-				 
-				  
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  
-				  </button>
-
-				  
-				    <a class="navbar-brand">Welcome <strong> <%= current_user.name %></strong>!</a>
-				   
-				  
-			  </div> <!-- end of navbar-header -->
-			  
-			  
-				  
-				 
-				  
-				 
-					  
-						  
-			   		
-
-			   
-						 
-					
-					  
-					<a href="" class="navbar-brand centered">FantasySportsHub</a> 
-
-      <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            
-            <li><%= link_to "Home", users_path(@user) %></li>
-			<li><%= link_to "Teams List", user_teams_path %></li>
-          </ul>
-        
-					  
-				 	  
-						  
-	<div class="navbar-right">		   	
-					
-           
-
-        <% if logged_in? %>
-
-  
-
- 	
-
- 	   <%= button_to "Log Out", logout_path, method: 'delete', class: 'btn btn-danger button' %> 
- 	   <% else %>
-
-
- 	   <%= link_to "Log In", users_signup_path,  class: 'btn btn-danger button' %> 
-
- 
-   </div>
- 	 
-
- 	<% end %>
-				</div>		 
-					   
-				  
-			  </div> <!-- end of collapse navbar div -->
-			  
-		  </div> <!-- end of navbar container div -->
-		  
-	  </div> <!-- end of navbar div -->
-
-
+<%= render "shared/teamnav" %>
 <div class="container-full">
 	
 	
 
-<h1>Add Your Fantasy Basketball Team</h1>
-
-
-			
+ <h1>Add Your Fantasy Basketball Team</h1>
+ <p><%= link_to "Import Your Team", user_path(current_user) , class: 'btn btn-lg btn-success' %></p>
 
 
 </div>	
-
 <%= render "shared/footer" %>		 

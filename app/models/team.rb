@@ -13,6 +13,12 @@ class Team
   field :available4, type: String
   field :available5, type: String
   field :available6 , type: String
+  field :topunavailable, type: String
+  field :topunavailable2, type: String
+  field :topunavailable3, type: String
+  field :topunavailable4, type: String
+  field :topunavailable5, type: String
+  field :topunavailable6 , type: String
 
   embedded_in :user
 
