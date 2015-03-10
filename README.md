@@ -18,6 +18,7 @@ Last Call runs on the following technologies:
 * Bootstrap 3.3.2
 * Yahoo Oauth
 * Heroku for deployment
+* Code Climate
 
 
 
@@ -43,7 +44,7 @@ Run the following commands to use these gems
 	* add each gem to your Gemfile, then
 	* run `bundle install`
 	
-<h3>Databases in Bring It Back</h3>
+<h3>Databases in Fantasy Sports Hub</h3>
 <p>To set up the database in Fantasy Sports Hub, please be sure to install Mongo to your local machine, and to include the mongoid gem in the app.</p>
 In order to populate the data base, you'll need to rake the seed file with the following command:
 
