@@ -1,72 +1,27 @@
 Rails.application.routes.draw do
- get "users/signup/" => "users#new", as: :new_user
 
+root 'users#index'
 
+get "users/signup/" => "users#new", as: :new_user
 
   resources :users, except: [:edit, :update, :destroy] do
 
-  resources :teams #only: :create
+  resources :teams 
 
-end
+  end
 
+get "users/:id/edit" => "users#edit", as: :edit_user
 
+patch "users/:id" => "users#update"
 
- #root 'users#index'
-
-
-
- 
- #resources :users, only: [:index, :create, :show, :edit, :update]
-
-
-
- 
-
-#  get "users/" => "users#index"
-
-#  get "users/signup/" => "users#new", as: :new_user
-
-  
-
-#get "users/:id" => "users#show", as: :user
-
-#   post "users/" => "users#create"
-
-  get "users/:id/edit" => "users#edit", as: :edit_user
-
-  patch "users/:id" => "users#update"
-
-  delete "users/:id" => "users#destroy" 
-
- 
-
-#   get "teams/" => "teams#index"
-
-#   get "teams/new" => "teams#new", as: :new_team
-
-#   get "teams/:id" => "teams#show", as: :team
-
-#   post "teams/" => "teams#create"
-
-#   get "teams/:id/edit" => "teams#edit", as: :edit_team
-
-#   patch "teams/:id" => "teams#update"
-
-#   delete "teams/:id" => "teams#destroy"
-
-
+delete "users/:id" => "users#destroy" 
 
 get 'users/signup/' => 'sessions#new'
-post 'users/signup/' => 'sessions#create' #, as: :signup
+
+post 'users/signup/' => 'sessions#create' 
 
 delete '/logout' => 'sessions#destroy'
 
-
-
- 
-
-
- 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
