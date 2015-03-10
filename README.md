@@ -43,11 +43,18 @@ Run the following commands to use these gems
 	* add each gem to your Gemfile, then
 	* run `bundle install`
 	
+<h3>Databases in Bring It Back</h3>
+<p>To set up the database in Fantasy Sports Hub, please be sure to install Mongo to your local machine, and to include the mongoid gem in the app.</p>
+In order to populate the data base, you'll need to rake the seed file with the following command:
+
+<code>rake db:seed</code>
+and when it's deployed on Heroku run:
+<code>heroku rake db:seed</code>
 
 	
-###Thanks for checking out Last Call!
+###Thanks for checking out Fantasy Sports Hub!
 
-Feel free to ask questions or send pull requests. Donations can be made in pizza or coffee. Enjoy!
+Feel free to ask questions or send pull requests. Donations can be made in jelly beans and vanilla ice-cream. Enjoy!
 
 
 
