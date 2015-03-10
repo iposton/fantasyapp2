@@ -51,6 +51,13 @@ In order to populate the data base, you'll need to rake the seed file with the f
 and when it's deployed on Heroku run:
 <code>heroku rake db:seed</code>
 
+####Learning Objectives
+* Practice some of my newly data Modeling skills with MongoDb!
+* Be able to write user authentication by hand ***on my own*** without using devise!
+* Connect views with routes run: <code>rake routes</code> ***to find path names***
+* Use embedded documents in data structure - in this case user embeds teams - teams embedded in user
+* Learn Oauth how to connect to API's
+
 	
 ###Thanks for checking out Fantasy Sports Hub!
 
