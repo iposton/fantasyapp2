@@ -10,7 +10,7 @@ Fantasy Sports Hub is an app for people who have multiple Fantasy Teams, associt
 
 ###Software used in Fantasy Sports Hub
 
-Last Call runs on the following technologies:
+Fantasy Sports Hub runs on the following technologies:
 
 * Rails 4.1.7
 * Ruby 2.1.3
